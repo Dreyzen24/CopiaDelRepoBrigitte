@@ -15,7 +15,7 @@ public  abstract class IdatRoomDatabase extends RoomDatabase {
     public abstract PersonaDao personaDao();
     private static volatile IdatRoomDatabase INSTANCIA;
 
-    private static IdatRoomDatabase getDatabase(final Context context){
+    public static IdatRoomDatabase getDatabase(final Context context){
         if (INSTANCIA == null){
             synchronized (IdatRoomDatabase.class){
                 if (INSTANCIA == null){
